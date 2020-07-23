@@ -1,15 +1,16 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 
+// import { Authinterceptor } from './shared/interceptors/authinterceptor';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { DashboardComponent } from './src/app/pages/dashboard/dashboard.component';
-import { ProfileComponent } from './pages/dashboard/profile/profile.component';
-import { CardContainerComponent } from './pages/dashboard/card-container/card-container.component';
 import { LoginComponent } from './pages/login/login.component';
 import { SignUpComponent } from './pages/sign-up/sign-up.component';
+import { DashboardComponent } from './pages/dashboard/dashboard.component';
+import { ProfileComponent } from './shared/classes/profile/profile.component';
+import { CardContainerComponent } from './shared/classes/card-container/card-container.component';
 
 
 @NgModule({
@@ -27,7 +28,7 @@ import { SignUpComponent } from './pages/sign-up/sign-up.component';
     HttpClientModule,
     FormsModule
   ],
-  providers: [],
+  // providers: [{ provide: HTTP_INTERCEPTORS, useClass: Authinterceptor, multi: true }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
 import { environment } from 'src/environments/environment';
 import { HttpClient } from '@angular/common/http';
-import { User } from '../../classes/user';
 import { Observable } from 'rxjs';
+import { Guardian } from '../../classes/user';
 
 @Injectable({
   providedIn: 'root'
@@ -13,21 +13,22 @@ export class UserService {
 
   constructor(private http: HttpClient) { }
 
-  getAllProjects(): Observable<User[]>{
-    return this.http.get<User[]>(UserService.USER_URL);
+  getAllUsers(): Observable<Guardian[]>{
+    return this.http.get<Guardian[]>(UserService.USER_URL);
   }
 
-  getProjectById(id: number): Observable<User>{
-    return this.http.get<User>(`${UserService.USER_URL}/${id}`);
+  getUserById(id: number): Observable<Guardian>{
+    console.log(this.http.get<Guardian>(`${UserService.USER_URL}/${id}`));
+    return this.http.get<Guardian>(`${UserService.USER_URL}/${id}`);
   }
 
-  postProject(user): Observable<any>{
-    return this.http.post<any>(UserService.USER_URL, user);
+  postUser(guardian): Observable<any>{
+    return this.http.post<any>(UserService.USER_URL, guardian);
   }
-  putProjectById(user): Observable<any>{
-    return this.http.put<any>(`${UserService.USER_URL}/${user.id}`, user);
+  putUser(guardian): Observable<any>{
+    return this.http.put<any>(`${UserService.USER_URL}/${guardian.id}`, guardian);
   }
-  deleteProjectById(id: number): Observable<void> {
+  deleteUserById(id: number): Observable<void> {
     return this.http.delete<void>(`${UserService.USER_URL}/${id}`);
   }
 }

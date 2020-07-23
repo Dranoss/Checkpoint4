@@ -1,0 +1,11 @@
+<div>
+  <!-- <img src="https://vignette.wikia.nocookie.net/hunterxhunter/images/2/25/51_-_Chrollo_smiling.png/revision/latest?cb=20180705045507"> -->
+  <img [src]="userModel.profilePicture">
+  <p>Username: {{userModel.username}}</p>
+  <p>Firstname: {{userModel.firstName}}</p>
+  <p>LastName: {{userModel.lastName}}</p>
+</div>
+
+<div>
+  <div *ngFor="let card of userModel.cards">{{card.name}}</div>
+</div>

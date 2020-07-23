@@ -1,0 +1,22 @@
+div{
+  height: 50%;
+  width: 25%;
+  border-radius: 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: lightblue;
+  box-shadow: -13px -13px 13px #089bba,
+             	13px 13px 26px #0cdfff;
+  &:hover{
+    box-shadow: -30px -30px 30px #0ab4d8,
+            	30px 10px 10px #0bc6ee;
+  }
+}
+
+img{
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+}

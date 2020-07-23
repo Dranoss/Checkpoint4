@@ -13,21 +13,21 @@ export class CardTypeService {
 
   constructor(private http: HttpClient) { }
 
-  getAllProjects(): Observable<CardType[]>{
+  getAllCardTypes(): Observable<CardType[]>{
     return this.http.get<CardType[]>(CardTypeService.CARD_TYPE_URL );
   }
 
-  getProjectById(id: number): Observable<CardType>{
+  getCardTypeById(id: number): Observable<CardType>{
     return this.http.get<CardType>(`${CardTypeService.CARD_TYPE_URL }/${id}`);
   }
 
-  postProject(card): Observable<any>{
+  postCardType(card): Observable<any>{
     return this.http.post<any>(CardTypeService.CARD_TYPE_URL , card);
   }
-  putProjectById(card): Observable<any>{
+  putCardTypeById(card): Observable<any>{
     return this.http.put<any>(`${CardTypeService.CARD_TYPE_URL }/${card.id}`, card);
   }
-  deleteProjectById(id: number): Observable<void> {
+  deleteCardTypeById(id: number): Observable<void> {
     return this.http.delete<void>(`${CardTypeService.CARD_TYPE_URL }/${id}`);
   }
 }

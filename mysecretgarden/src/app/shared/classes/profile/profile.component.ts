@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { Guardian } from '../user';
+
 
 @Component({
   selector: 'app-profile',
@@ -7,9 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProfileComponent implements OnInit {
 
+  @Input()
+  userModel: Guardian;
   constructor() { }
 
   ngOnInit(): void {
+    console.log(this.userModel);
   }
 
 }

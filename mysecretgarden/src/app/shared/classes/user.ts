@@ -1,9 +1,9 @@
 import { Card } from './card';
 
-export class User {
+export class Guardian {
 
   public id?: number;
-  public role?: 'admin' | 'client';
+  public username?: string;
   public lastName?: string;
   public firstName?: string;
   public password?: string;
@@ -12,7 +12,7 @@ export class User {
 
 
   constructor(
-    role: 'admin' | 'client',
+    username: string,
     lastName: string,
     firstName: string,
     password: string,
@@ -22,7 +22,7 @@ export class User {
     ){
 
     this.id = id;
-    this.role = role;
+    this.username = username,
     this.lastName = lastName;
     this.firstName = firstName;
     this.password = password;
