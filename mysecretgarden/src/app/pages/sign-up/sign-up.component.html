@@ -1,14 +1,16 @@
-<h3>Almost there!</h3>
-<div>
-  <form class="signUpForm" (ngSubmit)="signUpForm.valid && onSubmit()" #signUpForm="ngForm">
-    <label for="password">First Name</label>
-    <input type="text" name="firstName" [(ngModel)]="newUserModel.firstName" #firstName="ngModel" required>
-    <label for="password">Last Name</label>
-    <input type="text" name="lastName" [(ngModel)]="newUserModel.lastName" #lastName="ngModel" required>
-    <label for="username">Username</label>
-    <input type="username" name="username" [(ngModel)]="newUserModel.username" #username="ngModel" required>
-    <label for="password">Password</label>
-    <input type="password" name="password" [(ngModel)]="newUserModel.password" #password="ngModel" required>
-    <button type="submit" class="valider">Register</button>
-  </form>
+<div class="container">
+  <h3>Almost there!</h3>
+  <div>
+    <form class="signUpForm" (ngSubmit)="signUpForm.valid && onSubmit()" #signUpForm="ngForm">
+      <label for="password">First Name</label>
+      <input type="text" name="firstName" [(ngModel)]="newUserModel.firstName" #firstName="ngModel" required>
+      <label for="password">Last Name</label>
+      <input type="text" name="lastName" [(ngModel)]="newUserModel.lastName" #lastName="ngModel" required>
+      <label for="username">Username</label>
+      <input type="username" name="username" [(ngModel)]="newUserModel.username" #username="ngModel" required>
+      <label for="password">Password</label>
+      <input type="password" name="password" [(ngModel)]="newUserModel.password" #password="ngModel" required>
+      <button type="submit" class="valider">Register</button>
+    </form>
+  </div>
 </div>

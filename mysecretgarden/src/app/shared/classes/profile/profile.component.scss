@@ -1,4 +1,4 @@
-div{
+.user-profile{
   height: 50%;
   width: 25%;
   border-radius: 1em;
@@ -6,12 +6,8 @@ div{
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: lightblue;
-  box-shadow: -13px -13px 13px #089bba,
-             	13px 13px 26px #0cdfff;
+  background-color: #f48670;
   &:hover{
-    box-shadow: -30px -30px 30px #0ab4d8,
-            	30px 10px 10px #0bc6ee;
   }
 }
 
@@ -19,4 +15,30 @@ img{
   width: 300px;
   height: 300px;
   border-radius: 50%;
+}
+
+.cards-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container{
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.cards{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20vw;
+  height: 5vh;
+  background-color: #d9d7fa;
+  margin: 2vh 0;
+  border-radius: 1em;
 }
