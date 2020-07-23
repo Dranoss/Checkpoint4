@@ -9,6 +9,7 @@ import { DashboardComponent } from './src/app/pages/dashboard/dashboard.componen
 import { ProfileComponent } from './pages/dashboard/profile/profile.component';
 import { CardContainerComponent } from './pages/dashboard/card-container/card-container.component';
 import { LoginComponent } from './pages/login/login.component';
+import { SignUpComponent } from './pages/sign-up/sign-up.component';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { LoginComponent } from './pages/login/login.component';
     DashboardComponent,
     ProfileComponent,
     CardContainerComponent,
-    LoginComponent
+    LoginComponent,
+    SignUpComponent
   ],
   imports: [
     BrowserModule,
