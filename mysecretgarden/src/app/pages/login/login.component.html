@@ -1,0 +1,10 @@
+<div class="back">
+  <form class="loginForm" (ngSubmit)="loginForm.valid && onSubmit()" #loginForm="ngForm">
+    <h3>Connexion</h3>
+    <label for="username">Username</label>
+    <input type="username" name="username" [(ngModel)]="userModel.username" #username="ngModel" required>
+    <label for="password">Password</label>
+    <input type="password" name="password" [(ngModel)]="userModel.password" #password="ngModel" required>
+    <button type="submit" class="valider">Valider</button>
+  </form>
+</div>
