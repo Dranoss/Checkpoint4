@@ -32,7 +32,7 @@ export class AuthService {
                     if (this.token != null && localStorage.getItem('userRole') === 'admin'){
                       this.router.navigateByUrl('/');
                     } else if (this.token != null){
-                      this.router.navigateByUrl('/' + +localStorage.getItem('userId'));
+                      this.router.navigateByUrl('dashboard/' + +localStorage.getItem('userId'));
                     }
                   });
                 });
